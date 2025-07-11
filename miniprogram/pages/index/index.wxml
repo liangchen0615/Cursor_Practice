@@ -1,10 +1,10 @@
 <!-- pages/index/index.wxml -->
 <view class="container">
   <view class="guess-grid">
-    <block wx:for="{{guesses}}" wx:for-item="row" wx:key="index">
+    <block wx:for="{{guesses}}" wx:for-item="row" wx:key="index" wx:for-index="rowIdx">
       <view class="guess-row">
-        <block wx:for="{{row}}" wx:for-item="cell" wx:key="index">
-          <view class="guess-cell">{{cell}}</view>
+        <block wx:for="{{row}}" wx:for-item="cell" wx:key="index" wx:for-index="colIdx">
+          <view class="guess-cell {{colors[rowIdx][colIdx]}}">{{cell}}</view>
         </block>
       </view>
     </block>
@@ -13,9 +13,10 @@
     <block wx:for="{{keyboard}}" wx:for-item="row" wx:key="index">
       <view class="keyboard-row">
         <block wx:for="{{row}}" wx:for-item="key" wx:key="index">
-          <button class="key-btn">{{key}}</button>
+          <button class="key-btn" data-key="{{key}}" bindtap="onKeyTap">{{key}}</button>
         </block>
       </view>
     </block>
   </view>
+  <view class="message">{{message}}</view>
 </view> 
