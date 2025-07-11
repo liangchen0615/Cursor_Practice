@@ -1,25 +1,12 @@
 {
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "wordle-wechat",
+  "description": "A Wordle game implemented as a WeChat Mini Program.",
+  "appid": "",
   "setting": {
+    "urlCheck": false,
     "es6": true,
-    "postcss": true,
-    "minified": true,
-    "uglifyFileName": false,
-    "enhance": true,
-    "packNpmRelationList": [],
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "useCompilerPlugins": false,
-    "minifyWXML": true
+    "enhance": true
   },
-  "compileType": "miniprogram",
-  "simulatorPluginLibVersion": {},
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "appid": "wxb8b26207e5336c33",
-  "editorSetting": {}
-}
+  "compileType": "miniprogram"
+} 
